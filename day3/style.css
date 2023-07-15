@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: gray;
+  overflow-x: hidden;
+}
+
+h1, #menu, #close, #open, nav a, ul {
+  margin: 0;
+}
+
+#menu, #close, #open {
+  position: fixed;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+#menu {
+  top: -160px;
+  left: -160px;
+  width: 300px;
+  height: 300px;
+  background-color: orange;
+  padding: 1rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+#close {
+  bottom: 20%;
+  left: 20%;
+  font-size: 3rem;
+}
+
+#open {
+  bottom: 18%;
+  right: 20%;
+  font-size: 3rem;
+}
+
+.menu--rotate, .menu--back--rotate, .container, .container--rotate {
+  transition: 0.5s ease;
+}
+
+.menu--rotate, .menu--back--rotate {
+  transform: rotate(-90deg);
+}
+
+.menu--back--rotate {
+  transform: rotate(0);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  transform-origin: top left;
+  width: 100%;
+  height: 100%;
+}
+
+.container--rotate {
+  transform: rotate(-20deg);
+  transform-origin: top left;
+}
+
+.content {
+  padding: 8rem 5rem;
+  max-width: 1280px;
+}
+
+.container p {
+  line-height: 1.8rem;
+}
+
+#main__image {
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 15px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 1.2rem;
+}
+
+nav {
+  position: fixed;
+  left: -200px;
+  color: white;
+  margin-bottom: 10rem;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+
+.nav--show {
+  left: 0;
+  transition: left 0.7s ease .1s;
+}
+
+nav ul li {
+  margin : 3rem 0;
+}
+
+nav ul li + li {
+  margin-left : 15px;
+}
+
+nav ul li + li + li {
+  margin-left : 30px;
+}
