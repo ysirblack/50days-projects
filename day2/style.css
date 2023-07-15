@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #F6F7FB;
+}
+
+#empty__line{ 
+  position: absolute;
+  top: 20%;
+  left: 0;
+  border-style: solid;
+  border-width: 2px;
+  width: 0;
+  border-color: #3498db;
+  transition: 0.4s ease;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  width: fit-content;
+}
+
+.container::before{ 
+  content: "";
+  position: absolute;
+  top: 20%;
+  left:0;
+  border-style: solid;
+  border-width: 2px;
+  width: 95%;
+  border-color: #e0e0e0;
+}
+
+.step__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 24rem;
+  justify-content: space-between;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 50%;
+  border-color: #e0e0e0;
+}
+
+.circle--active {
+  border-color: #3498db;
+  transition:  border-color .2s ease-in .1s;
+}
+
+.step {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.btn__container {
+  margin-top: 1rem;
+}
+
+.btn {
+  border-width: 0;
+  padding: .7rem 2.5rem;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.btn:active{
+  scale: 0.99;
+}
+
+.btn--disabled {
+  background-color: #bdc3c7;
+  color: #7f8c8d;
+  cursor: not-allowed;
+}
+
